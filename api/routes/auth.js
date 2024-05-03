@@ -28,7 +28,7 @@ router.post("/register", async (req, res) => {
     });
 
 
-    const verificationLink = process.env.APP_URL + `/api/auth/verifyEmail?token=${token}`;
+    const verificationLink =  `https://nodejs-server-1-o4q8.onrender.com/api/auth/verifyEmail?token=${token}`;
     let mailOptions = {
         from: process.env.MAIL_FROM,
         to: newUser.email,
@@ -70,7 +70,7 @@ router.post("/forgotPassword", async (req, res) => {
             expiresIn: "1h",
         });
 
-        const verificationLink = `${process.env.APP_URL}/api/auth/resetPassword?token=${token}&newPassword=${req.body.password}`;
+        const verificationLink = `https://nodejs-server-1-o4q8.onrender.com/api/auth/resetPassword?token=${token}&newPassword=${req.body.password}`;
         let mailOptions = {
             from: process.env.MAIL_FROM,
             to: req.body.email,
