@@ -10,7 +10,10 @@ const ratingRoute = require("./routes/ratings")
 dotenv.config();
 const app = express();
 const PORT = 8800;
-app.use(cors());
+app.use(cors({
+    origin: ['http://localhost:3000', 'https://movieclient.netlify.app']
+  }));
+  
 mongoose.connect(process.env.MONGO_URL , {
     
 }).then(() => console.log("DB Connection Succesfull")).catch((err) => console.log(err))
