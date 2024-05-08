@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 const PORT = 8800;
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://movieclient.netlify.app','http://localhost:4000']
+    origin: ['http://localhost:3000', 'https://movieclient.netlify.app','http://localhost:4000','https://movie-app-motphim.com']
   }));
   
 mongoose.connect(process.env.MONGO_URL , {
