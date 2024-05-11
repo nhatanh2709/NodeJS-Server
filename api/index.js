@@ -17,7 +17,6 @@ const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:4000',
   'https://movieclient.netlify.app',
-  'https://master.d1pmalx24e72ma.amplifyapp.com',
   'https://movie-app-motphim.com'
 ];
 
