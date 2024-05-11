@@ -13,8 +13,16 @@ dotenv.config();
 const app = express();
 const PORT = 8800;
 app.use(express.static(path.join(__dirname, 'public')));
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:4000',
+  'https://movieclient.netlify.app',
+  'https://master.d1pmalx24e72ma.amplifyapp.com',
+  'https://movie-app-motphim.com'
+];
+
 app.use(cors({
-    origin: 'https://movieclient.netlify.app'
+    origin: allowedOrigins
   }));
   
 mongoose.connect(process.env.MONGO_URL , {
